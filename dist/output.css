@@ -539,3 +539,111 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+header img {
+  height: 80px;
+}
+
+body {
+  /* height: 125vh; */
+  background-image: url('https://imgr1.auto-motor-und-sport.de/Mercedes-AMG-Art-Cars-Palace-Streetwear-Skateboard-react169Big-b226e370-1883612.jpg');
+  background-size: cover;
+  font-family: sans-serif;
+  margin-top: 18rem;
+  padding: 30px;
+}
+
+main {
+  color: white;
+}
+
+header {
+  background-color: rgb(39, 36, 224);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+}
+
+/* header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+header ul {
+    list-style: none;
+    width: 100%;
+} */
+
+/* Menu */
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50px;
+}
+
+.center:before,
+  .center:after,
+  .center div {
+  background: brown;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.5s;
+}
+
+.center:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.center:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.center:hover div {
+  transform: scale(0);
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    display: none;
+    float: right;
+  }
+}
+
+@media (min-width: 720px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+}
