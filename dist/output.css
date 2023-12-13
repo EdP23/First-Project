@@ -540,9 +540,43 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.bg-green-200 {
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.bg-red-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 * {
@@ -559,19 +593,15 @@ header img {
 
 body {
   /* height: 125vh; */
-  background-image: url('https://imgr1.auto-motor-und-sport.de/Mercedes-AMG-Art-Cars-Palace-Streetwear-Skateboard-react169Big-b226e370-1883612.jpg');
-  background-size: cover;
-  font-family: sans-serif;
-  margin-top: 18rem;
-  padding: 30px;
-}
-
-main {
-  color: white;
+  /* background-image: url('https://imgr1.auto-motor-und-sport.de/Mercedes-AMG-Art-Cars-Palace-Streetwear-Skateboard-react169Big-b226e370-1883612.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 18rem;
+    padding: 30px; */
+  background-color: aqua;
 }
 
 header {
-  background-color: rgb(39, 36, 224);
   position: fixed;
   top: 0;
   left: 0;
@@ -582,36 +612,42 @@ header {
   box-shadow: 0 0 25px 0 black;
 }
 
-/* header * {
-    display: inline;
+header * {
+  display: inline;
 }
 
 header li {
-    margin: 20px;
+  margin: 20px;
 }
 
 header li a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
+
+nav  a:hover {
+  background-color: rgb(162, 219, 162);
+  transform: scale(1.2);
+}
+
 header ul {
-    list-style: none;
-    width: 100%;
-} */
+  list-style: none;
+  width: 100%;
+}
 
-/* Menu */
+/* Menu Toggle */
 
-.center {
-  top: 50%;
-  left: 50%;
+label {
+  top: 80%;
+  left: 80%;
   transform: translate(-50%, -50%);
   position: absolute;
-  width: 50px;
+  width: auto;
 }
 
-.center:before,
-  .center:after,
-  .center div {
+label:before,
+  label:after,
+  label div {
   background: brown;
   content: "";
   display: block;
@@ -621,22 +657,106 @@ header ul {
   transition: 0.5s;
 }
 
-.center:hover:before {
+label:hover:before {
   transform: translateY(12px) rotate(135deg);
 }
 
-.center:hover:after {
+label:hover:after {
   transform: translateY(-12px) rotate(-135deg);
 }
 
-.center:hover div {
+label:hover div {
   transform: scale(0);
 }
 
+/* CONTAINER */
+
+.haupt-main {
+  margin-top: 6rem;
+}
+
+#container {
+  margin: 30px auto;
+  width: 960px;
+  background-image: url('dist/img/background.jpeg');
+}
+
+header {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+#content {
+  float: left;
+  width: 56%;
+  margin-right: 2%;
+  height: 800px;
+}
+
+#sidebar1 {
+  float: left;
+  width: 20%;
+  margin-right: 2%;
+  height: 800px;
+}
+
+#sidebar2 {
+  float: left;
+  width: 20%;
+  height: 800px;
+}
+
+nav > input, nav > label {
+  display: none;
+  /* Label und Checkbox ausblenden*/
+}
+
+nav > label {
+  width: 20%;
+}
+
 @media (max-width: 480px) {
-  nav ul {
-    display: none;
-    float: right;
+  nav > label, nav ul li ul {
+    display: block;
+  }
+
+  nav > ul {
+    height: 0;
+    opacity: 0;
+    clear: both;
+    transition:all .5s ease;
+  }
+
+  nav > input:checked + ul {
+    opacity: 1;
+    height: auto;
+  }
+
+  #content {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2%;
+    background-color: bisque;
+  }
+
+  #sidebar1 {
+    width: 100%;
+    height: 200px;
+    margin-right: 0;
+    margin-bottom: 2%;
+    background-color: brown;
+  }
+
+  #sidebar2 {
+    width: 100%;
+    height: 200px;
+    margin-top: 2%;
+    background-color: green;
+  }
+
+  body {
+    background-image: url(.././dist/img/background.jpeg);
+    background-size:contain;
   }
 }
 
@@ -646,4 +766,32 @@ header ul {
     justify-content: space-around;
     list-style: none;
   }
+
+  .center {
+    display: none;
+  }
 }
+
+@media (max-width: 1024px) {
+  #container {
+    width:100%;
+  }
+
+  #content {
+    width:78%;
+    background-color: bisque;
+  }
+
+  #sidebar1 {
+    width: 20%;
+    margin-right: 0;
+    margin-bottom: 2%;
+    background-color: brown;
+  }
+
+  #sidebar2 {
+    width: 100%;
+    height: 200px;
+    background-color: green;
+  }
+} 
