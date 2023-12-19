@@ -797,6 +797,10 @@ nav ul li {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-tr{
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
 .from-\[\#fa760b\]{
   --tw-gradient-from: #fa760b var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(250 118 11 / 0) var(--tw-gradient-to-position);
@@ -945,6 +949,11 @@ nav ul li {
   color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 
+.text-orange-600{
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -990,7 +999,6 @@ header img {
   height: 80px;
 }
 
-html,
 body {
   background-image: url(.././dist/img/background.jpeg);
   background-size: contain;
@@ -1083,8 +1091,6 @@ nav > label {
 .haupt-main {
   display: flex;
   margin-top: 5rem;
-  min-height: 100%;
-  margin-bottom: -80px;
 }
 
 #container {
@@ -1094,31 +1100,35 @@ nav > label {
 }
 
 #content {
-  width: 56%;
-  background-color: bisque;
+  width: 50%;
+  height: 100vh;
+  /* background-color: bisque; */
 }
 
 #sidebar1 {
-  width: 20%;
-  background-color: brown;
+  width: 25%;
+  height: 100vh;
+  /* background-color: brown; */
 }
 
 #sidebar2 {
-  width: 20%;
-  background-color: green;
+  width: 25%;
+  height: 100vh;
+  /* background-color: green; */
 }
 
 .footer {
-  height: 80px;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
-  background-color: chocolate;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
 }
 
 /* MEDIA SCREEN */
 
-@media (max-width: 500px) {
+@media (max-width: 522px) {
   nav > label,
   nav ul li ul {
     display: block;
@@ -1136,87 +1146,109 @@ nav > label {
     height: auto;
   }
 
+  #container p, h1, h2 {
+    font-size: 19px;
+    -webkit-text-stroke-width: 1px;
+  }
+
   .haupt-main {
     display: flex;
     flex-direction: column;
-    flex: 1 0 auto;
+    height: auto;
+    padding: 0;
   }
 
   #content {
     width: 100%;
-    background-color: bisque;
+    height: 35%;
+    /* background-color: bisque; */
   }
 
   #sidebar1 {
     width: 100%;
-    float: none;
-    background-color: brown;
+    height: 40%;
+    /* background-color: brown; */
   }
 
   #sidebar2 {
     width: 100%;
-    background-color: green;
+    height: 35%;
+    /* background-color: green; */
   }
 
   .footer {
-    bottom: 0;
+    text-align: center;
+    position: static;
+    margin-top: 21rem;
+    width:auto;
+    left:auto;
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 523px) {
   nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
   }
 
-  .center {
-    display: none;
-  }
-
   .haupt-main {
-    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
   }
 
-  #container {
-    width: 100%;
-    position: relative;
+  #container p,
+  h1,
+  h2 {
+    font-size: 12px;
+    -webkit-text-stroke-width: 1px;
   }
 
   #content {
-    width: 49.5%;
+    flex-grow: 1;
+    /* Nimmt den verfügbaren Platz ein */
+    flex-basis: 50%;
+    /* Anfangsbreite von 50% */
+    height: 40%;
     background-color: bisque;
-    margin-left: 2px;
   }
 
   #sidebar1 {
-    width: 49.5%;
-    margin-left: 2px;
+    flex-grow: 1;
+    /* Nimmt den verfügbaren Platz ein */
+    flex-basis: 50%;
+    /* Anfangsbreite von 50% */
+    height: 40%;
     background-color: brown;
-    float: right;
   }
 
   #sidebar2 {
-    width: 100%;
+    flex-grow: 1;
+    /* Nimmt den verfügbaren Platz ein */
+    flex-basis: 100%;
+    /* Anfangsbreite von 100% */
+    height: 35%;
     background-color: green;
   }
 
   .footer {
-    width: 100%;
-    height: 10vh;
-    position: absolute;
-    bottom: 0;
-    background-color: chocolate;
+    text-align: center;
+    position: static;
+    margin-top: 21rem;
+    width:auto;
+    left:auto;
   }
 }
 
-@media (min-width: 720px) {
+/* @media (min-width: 720px) {
+  
   #container {
     width: 100%;
     display: flex;
   }
 
   #content {
+    width: 78%;
     width: 33%;
     margin-left: 4px;
   }
@@ -1224,7 +1256,7 @@ nav > label {
   #sidebar1 {
     width: 33%;
     margin-left: 4px;
-    /* margin-bottom: 2%; */
+    margin-bottom: 2%;
   }
 
   #sidebar2 {
@@ -1236,7 +1268,7 @@ nav > label {
     width: 100%;
     height: 10vh;
   }
-}
+} */
 
 .placeholder\:text-gray-400::-moz-placeholder{
   --tw-text-opacity: 1;
