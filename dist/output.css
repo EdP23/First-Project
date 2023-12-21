@@ -556,9 +556,15 @@ nav ul li {
   width: 100%;
 }
 
-@media (min-width: 640px){
+@media (min-width: 380px){
   .container{
-    max-width: 640px;
+    max-width: 380px;
+  }
+}
+
+@media (min-width: 523px){
+  .container{
+    max-width: 523px;
   }
 }
 
@@ -659,6 +665,10 @@ nav ul li {
   height: 1.5rem;
 }
 
+.h-auto{
+  height: auto;
+}
+
 .w-12{
   width: 3rem;
 }
@@ -669,6 +679,10 @@ nav ul li {
 
 .w-full{
   width: 100%;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .flex-1{
@@ -1090,6 +1104,7 @@ nav > label {
 
 .haupt-main {
   display: flex;
+  flex-direction: column;
   margin-top: 5rem;
 }
 
@@ -1097,6 +1112,13 @@ nav > label {
   width: 100%;
   height: 100vh;
   /* background-color: azure; */
+}
+
+.demo {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 #content {
@@ -1126,7 +1148,7 @@ nav > label {
   height: 5vh;
 }
 
-/* MEDIA SCREEN */
+/* MEDIA SCREEN MOBILE */
 
 @media (max-width: 522px) {
   nav > label,
@@ -1146,7 +1168,9 @@ nav > label {
     height: auto;
   }
 
-  #container p, h1, h2 {
+  #container p,
+  h1,
+  h2 {
     font-size: 19px;
     -webkit-text-stroke-width: 1px;
   }
@@ -1170,6 +1194,13 @@ nav > label {
     /* background-color: brown; */
   }
 
+  .demo {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 31em;
+    height: 31em;
+  }
+
   #sidebar2 {
     width: 100%;
     height: 35%;
@@ -1179,22 +1210,22 @@ nav > label {
   .footer {
     text-align: center;
     position: static;
-    margin-top: 21rem;
-    width:auto;
-    left:auto;
+    margin-top: 90rem;
+    width: auto;
+    left: auto;
   }
 }
 
+/* MEDIA SCREEN TABLET */
+
 @media (min-width: 523px) {
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
+  .haupt-main {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  .haupt-main {
-    display: flex;
-    width: 100%;
+  #container {
+    flex-basis: 100%;
   }
 
   #container p,
@@ -1205,70 +1236,68 @@ nav > label {
   }
 
   #content {
-    flex-grow: 1;
-    /* Nimmt den verfügbaren Platz ein */
     flex-basis: 50%;
-    /* Anfangsbreite von 50% */
-    height: 40%;
-    background-color: bisque;
+    height: 35%;
+    /* background-color: bisque; */
   }
 
   #sidebar1 {
-    flex-grow: 1;
-    /* Nimmt den verfügbaren Platz ein */
     flex-basis: 50%;
-    /* Anfangsbreite von 50% */
-    height: 40%;
-    background-color: brown;
+    height: 45%;
+    padding-top: 2rem;
+    /* background-color: brown; */
+  }
+
+  .demo {
+    margin-bottom: 2rem;
+    width: 15rem;
+    height: 15rem;
   }
 
   #sidebar2 {
-    flex-grow: 1;
-    /* Nimmt den verfügbaren Platz ein */
     flex-basis: 100%;
-    /* Anfangsbreite von 100% */
-    height: 35%;
-    background-color: green;
+    height: 40%;
+    margin-top: 2rem;
+    /* background-color: green; */
   }
 
   .footer {
     text-align: center;
     position: static;
-    margin-top: 21rem;
-    width:auto;
-    left:auto;
+    margin-top: 7rem;
+    width: auto;
+    left: auto;
   }
 }
 
-/* @media (min-width: 720px) {
-  
+/* MEDIA SCREEN DESKTOP */
+
+@media (min-width: 768px) {
+  .haupt-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   #container {
     width: 100%;
-    display: flex;
+    height: auto;
   }
 
-  #content {
-    width: 78%;
-    width: 33%;
-    margin-left: 4px;
-  }
-
-  #sidebar1 {
-    width: 33%;
-    margin-left: 4px;
-    margin-bottom: 2%;
-  }
-
-  #sidebar2 {
-    width: 32%;
-    margin-left: 4px;
+  #container p,
+  h1,
+  h2 {
+    font-size: 20px;
+    -webkit-text-stroke-width: 1px;
   }
 
   .footer {
-    width: 100%;
-    height: 10vh;
+    text-align: center;
+    position: static;
+    margin-top: 14rem;
+    width: auto;
+    left: auto;
   }
-} */
+}
 
 .placeholder\:text-gray-400::-moz-placeholder{
   --tw-text-opacity: 1;
@@ -1356,7 +1385,7 @@ nav > label {
   outline-color: #4f46e5;
 }
 
-@media (min-width: 640px){
+@media (min-width: 523px) and (max-width: 767px){
   .sm\:col-span-2{
     grid-column: span 2 / span 2;
   }
