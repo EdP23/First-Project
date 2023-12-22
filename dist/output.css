@@ -793,11 +793,6 @@ nav ul li {
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 
-.bg-red-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-}
-
 .bg-transparent{
   background-color: transparent;
 }
@@ -998,6 +993,7 @@ nav ul li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 :root {
@@ -1047,7 +1043,7 @@ header li a {
 }
 
 nav a:hover {
-  background-color: rgb(162, 219, 162);
+  background-color: rgb(216, 80, 27);
   transform: scale(1.2);
 }
 
@@ -1139,6 +1135,74 @@ nav > label {
   /* background-color: green; */
 }
 
+/* PROJEKTE */
+
+.filtr-container {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.filtr-container a {
+  height: 100%;
+}
+
+.filtr-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.item-desc {
+  font-size: 14px;
+  line-height: 1.5em;
+  background-color: rgba(36, 40, 50, 0.65);
+  text-transform: none;
+  padding: 6px 52px 6px 12px;
+  text-align: left;
+  color: #ececec;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.filtr-item a {
+  display: block;
+  position: relative;
+}
+
+.filtr-item a, .filtr-item img {
+  display: block;
+  position: sticky;
+  top: 0;
+}
+
+a.cboxElement::after {
+  font-family: FontAwesome;
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: rgb(255, 255, 255);
+}
+
+a.cboxElement {
+  display: block;
+  position: relative;
+}
+
+img {
+  display: inline-block;
+}
+
+/* FOOTER */
+
 .footer {
   text-align: center;
   padding: 10px;
@@ -1207,6 +1271,15 @@ nav > label {
     /* background-color: green; */
   }
 
+  /* PROJEKTE */
+
+  .filtr-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 8rem;
+  }
+
+  /* FOOTER */
+
   .footer {
     text-align: center;
     position: static;
@@ -1231,7 +1304,7 @@ nav > label {
   #container p,
   h1,
   h2 {
-    font-size: 12px;
+    font-size: 15px;
     -webkit-text-stroke-width: 1px;
   }
 
@@ -1250,8 +1323,8 @@ nav > label {
 
   .demo {
     margin-bottom: 2rem;
-    width: 15rem;
-    height: 15rem;
+    width: auto;
+    height: 170px;
   }
 
   #sidebar2 {
@@ -1259,6 +1332,13 @@ nav > label {
     height: 40%;
     margin-top: 2rem;
     /* background-color: green; */
+  }
+
+  /* Projekte */
+
+  .filtr-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 8rem;
   }
 
   .footer {
@@ -1288,6 +1368,18 @@ nav > label {
   h2 {
     font-size: 20px;
     -webkit-text-stroke-width: 1px;
+  }
+
+  .demo {
+    margin-bottom: 2rem;
+    width: auto;
+    height: 250px;
+  }
+
+  /* Projekte */
+
+  .filtr-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .footer {
