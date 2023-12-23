@@ -604,8 +604,20 @@ nav ul li {
   border-width: 0;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
+}
+
+.right-4{
+  right: 1rem;
+}
+
+.top-4{
+  top: 1rem;
 }
 
 .col-span-full{
@@ -653,6 +665,10 @@ nav ul li {
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-12{
   height: 3rem;
 }
@@ -667,6 +683,10 @@ nav ul li {
 
 .h-auto{
   height: auto;
+}
+
+.h-screen{
+  height: 100vh;
 }
 
 .w-12{
@@ -751,6 +771,10 @@ nav ul li {
   border-radius: 0.25rem;
 }
 
+.rounded-full{
+  border-radius: 9999px;
+}
+
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -788,6 +812,11 @@ nav ul li {
   border-color: rgb(17 24 39 / 0.25);
 }
 
+.bg-gray-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .bg-indigo-600{
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
@@ -823,6 +852,10 @@ nav ul li {
 
 .to-\[\#fa760b\]{
   --tw-gradient-to: #fa760b var(--tw-gradient-to-position);
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .px-2{
@@ -873,12 +906,20 @@ nav ul li {
   padding-left: 0.25rem;
 }
 
+.pl-2{
+  padding-left: 0.5rem;
+}
+
 .pl-3{
   padding-left: 0.75rem;
 }
 
 .pr-1{
   padding-right: 0.25rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
 }
 
 .pt-2{
@@ -999,8 +1040,9 @@ nav ul li {
 :root {
   --Grey: #484848;
   --White: White;
-  --Orange: #ff6c00;
+  --Orange: rgb(216, 80, 27);
   --black: rgb(46, 44, 44);
+  --fa-solid:var(--fa-maximize);
 }
 
 /* HEADER */
@@ -1043,7 +1085,7 @@ header li a {
 }
 
 nav a:hover {
-  background-color: rgb(216, 80, 27);
+  background-color: var(--Orange);
   transform: scale(1.2);
 }
 
@@ -1052,7 +1094,7 @@ header ul {
   width: 100%;
 }
 
-/* Menu Toggle */
+/* MENU TOGGLE */
 
 label {
   top: 80%;
@@ -1135,6 +1177,8 @@ nav > label {
   /* background-color: green; */
 }
 
+/* FOLIEN */
+
 /* PROJEKTE */
 
 .filtr-container {
@@ -1184,12 +1228,14 @@ nav > label {
 }
 
 a.cboxElement::after {
-  font-family: FontAwesome;
-  content: "";
+  content: "\f31e";
+  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-weight: 900;
   position: absolute;
   bottom: 5px;
   right: 10px;
-  color: rgb(255, 255, 255);
+  color:var(--White);
+  display: block;
 }
 
 a.cboxElement {
@@ -1199,6 +1245,35 @@ a.cboxElement {
 
 img {
   display: inline-block;
+}
+
+/* BUTTON FÜR IMG */
+
+.image_container {
+  position: relative;
+}
+
+.image_container input[type="box"] {
+  display: none;
+}
+
+.image_container label img {
+  cursor: pointer;
+}
+
+.image_container label button {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #888;
+  color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.image_container input[type="box"]:checked + label button {
+  display: block;
 }
 
 /* FOOTER */
@@ -1234,10 +1309,12 @@ img {
 
   #container p,
   h1,
-  h2 {
+  h2, p {
     font-size: 19px;
     -webkit-text-stroke-width: 1px;
   }
+
+  /* HOME-INDEX */
 
   .haupt-main {
     display: flex;
@@ -1271,6 +1348,12 @@ img {
     /* background-color: green; */
   }
 
+  /* FOLIEN */
+
+  .info {
+    margin-top: 5rem;
+  }
+
   /* PROJEKTE */
 
   .filtr-container {
@@ -1287,11 +1370,29 @@ img {
     width: auto;
     left: auto;
   }
+
+  .footer-fol {
+    text-align: center;
+    position: static;
+    margin-top: 6rem;
+    width: auto;
+    left: auto;
+  }
+
+  .footer-projekt {
+    text-align: center;
+    position: static;
+    margin-top: 8rem;
+    width: auto;
+    left: auto;
+  }
 }
 
 /* MEDIA SCREEN TABLET */
 
 @media (min-width: 523px) {
+  /* HOME-INDEX */
+
   .haupt-main {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1334,17 +1435,46 @@ img {
     /* background-color: green; */
   }
 
-  /* Projekte */
+  /* FOLIEN */
+
+  .info {
+    margin-top: 6rem;
+  }
+
+  .info p {
+    font-size: 18px;
+    -webkit-text-stroke-width: 1px;
+  }
+
+  /* PROJEKTE */
 
   .filtr-container {
     grid-template-columns: repeat(3, 1fr);
     padding-top: 8rem;
   }
 
+  /* FOOTER */
+
   .footer {
     text-align: center;
     position: static;
     margin-top: 7rem;
+    width: auto;
+    left: auto;
+  }
+
+  .footer-fol {
+    text-align: center;
+    position: static;
+    margin-top: 21rem;
+    width: auto;
+    left: auto;
+  }
+
+  .footer-projekt {
+    text-align: center;
+    position: static;
+    margin-top: 30rem;
     width: auto;
     left: auto;
   }
@@ -1376,16 +1506,58 @@ img {
     height: 250px;
   }
 
-  /* Projekte */
+  /* PROJEKTE */
 
   .filtr-container {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  /* FOOTER */
+
   .footer {
     text-align: center;
     position: static;
     margin-top: 14rem;
+    width: auto;
+    left: auto;
+  }
+
+  .footer-fol {
+    text-align: center;
+    position: static;
+    margin-top: 29rem;
+    width: auto;
+    left: auto;
+  }
+
+  .footer-projekt {
+    text-align: center;
+    position: static;
+    margin-top: 28rem;
+    width: auto;
+    left: auto;
+  }
+}
+
+/* MEDIA SCREEN LG-SIZE*/
+
+@media (min-width: 1024px) {
+  /* PROJEKTE */
+
+  /* FOOTER */
+
+  .footer {
+    text-align: center;
+    position: static;
+    margin-top: 14rem;
+    width: auto;
+    left: auto;
+  }
+
+  .footer-fol {
+    text-align: center;
+    position: static;
+    margin-top: 35rem;
     width: auto;
     left: auto;
   }
@@ -1428,6 +1600,11 @@ img {
 .hover\:bg-gray-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-indigo-500:hover{

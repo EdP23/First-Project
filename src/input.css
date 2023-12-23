@@ -23,8 +23,10 @@
 :root {
   --Grey: #484848;
   --White: White;
-  --Orange: #ff6c00;
+  --Orange: rgb(216, 80, 27);
   --black: rgb(46, 44, 44);
+  --fa-solid:var(--fa-maximize);
+
 }
 /* HEADER */
 header img {
@@ -64,7 +66,7 @@ header li a {
   text-decoration: none;
 }
 nav a:hover {
-  background-color: rgb(216, 80, 27);
+  background-color: var(--Orange);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -74,7 +76,7 @@ header ul {
   list-style: none;
   width: 100%;
 }
-/* Menu Toggle */
+/* MENU TOGGLE */
 label {
   top: 80%;
   left: 80%;
@@ -147,6 +149,7 @@ nav > label {
   /* background-color: green; */
 }
 
+/* FOLIEN */
 
 /* PROJEKTE */
 .filtr-container {
@@ -188,14 +191,15 @@ nav > label {
   top: 0;
 }
 a.cboxElement::after {
-  font-family: FontAwesome;
-  content: "";
+  content: "\f31e";
+  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-weight: 900;
   position: absolute;
   bottom: 5px;
   right: 10px;
-  color: rgb(255, 255, 255);
+  color:var(--White);
+  display: block;
 }
-
 a.cboxElement {
   display: block;
   position: relative;
@@ -203,7 +207,33 @@ a.cboxElement {
 img {
   display: inline-block;
 }
+/* BUTTON FÜR IMG */
+.image_container {
+  position: relative;
+}
 
+.image_container input[type="box"] {
+  display: none;
+}
+
+.image_container label img {
+  cursor: pointer;
+}
+
+.image_container label button {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #888;
+  color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.image_container input[type="box"]:checked + label button {
+  display: block;
+}
 /* FOOTER */
 .footer {
   text-align: center;
@@ -234,10 +264,12 @@ img {
   }
   #container p,
   h1,
-  h2 {
+  h2, p {
     font-size: 19px;
     -webkit-text-stroke-width: 1px;
   }
+
+  /* HOME-INDEX */
   .haupt-main {
     display: flex;
     flex-direction: column;
@@ -269,6 +301,10 @@ img {
     /* background-color: green; */
   }
 
+  /* FOLIEN */
+  .info {
+    margin-top: 5rem;
+  }
 
   /* PROJEKTE */
 .filtr-container {
@@ -285,9 +321,26 @@ img {
     width: auto;
     left: auto;
   }
+  .footer-fol {
+    text-align: center;
+    position: static;
+    margin-top: 6rem;
+    width: auto;
+    left: auto;
+  }
+  .footer-projekt {
+    text-align: center;
+    position: static;
+    margin-top: 8rem;
+    width: auto;
+    left: auto;
+  }
 }
+
+
 /* MEDIA SCREEN TABLET */
 @media (min-width: 523px) {
+  /* HOME-INDEX */
   .haupt-main {
     flex-direction: row;
     flex-wrap: wrap;
@@ -329,11 +382,22 @@ img {
     /* background-color: green; */
   }
 
-    /* Projekte */
+  /* FOLIEN */
+  .info {
+    margin-top: 6rem;
+  }
+  .info p {
+    font-size: 18px;
+    -webkit-text-stroke-width: 1px;
+  }
+    /* PROJEKTE */
 .filtr-container {
   grid-template-columns: repeat(3, 1fr);
   padding-top: 8rem;
 }
+
+
+/* FOOTER */
   .footer {
     text-align: center;
     position: static;
@@ -341,7 +405,23 @@ img {
     width: auto;
     left: auto;
   }
+  .footer-fol {
+    text-align: center;
+    position: static;
+    margin-top: 21rem;
+    width: auto;
+    left: auto;
+  }
+  .footer-projekt {
+    text-align: center;
+    position: static;
+    margin-top: 30rem;
+    width: auto;
+    left: auto;
+  }
 }
+
+
 /* MEDIA SCREEN DESKTOP */
 @media (min-width: 768px) {
   .haupt-main {
@@ -365,16 +445,57 @@ img {
     height: 250px;
   }
 
-      /* Projekte */
+      /* PROJEKTE */
 .filtr-container {
   grid-template-columns: repeat(4, 1fr);
 }
 
+
+/* FOOTER */
   .footer {
       text-align: center;
       position: static;
       margin-top: 14rem;
       width: auto;
       left: auto;
+  }
+  .footer-fol {
+    text-align: center;
+    position: static;
+    margin-top: 29rem;
+    width: auto;
+    left: auto;
+  }
+  .footer-projekt {
+    text-align: center;
+    position: static;
+    margin-top: 28rem;
+    width: auto;
+    left: auto;
+  }
+}
+
+/* MEDIA SCREEN LG-SIZE*/
+@media (min-width: 1024px) {
+
+
+      /* PROJEKTE */
+
+
+
+/* FOOTER */
+  .footer {
+      text-align: center;
+      position: static;
+      margin-top: 14rem;
+      width: auto;
+      left: auto;
+  }
+  .footer-fol {
+    text-align: center;
+    position: static;
+    margin-top: 35rem;
+    width: auto;
+    left: auto;
   }
 }
