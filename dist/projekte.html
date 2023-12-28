@@ -6,6 +6,7 @@
     <title>Project</title>
     <link href="./output.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/6f1b9abcad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body>
     <header class="bg-gradient-to-br from-[#fa760b] via-[black] to-[#fa760b]">
@@ -25,24 +26,25 @@
     </header>
     <main>
       <div class="filtr-container flex justify-center items-center h-screen pr-2 pl-2">
-        <div id="largeImage" class="col image_container1 filtr-item fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center" data-category="1">
-<input type="checkbox" id="toggle" class="image_container1">
+        <div id="largeImage" class="col image_container filtr-item" data-category="1">
         <a href="assets/images/DSC02105-dad73508.jpg" data-lightbox="lb147" title="Carwrap / komplett Folierung : Audi Q7 in Holzkohle matt" class="cboxElement">
-          <label for="toggle" class="absolute top-4 right-4 text-white text-3xl cursor-pointer">
-          </label>
+          <button id="closeButton" class="close-button"><i class="fas fa-times"></i></button>
         <picture>
-          <label for="toggle" class="cursor-pointer">
         <source srcset="assets/images/a/DSC02105-6d5f8e9a.webp 549w, assets/images/d/DSC02105-a54d8320.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC02105-bbcb0d48.jpg" srcset="assets/images/DSC02105-bbcb0d48.jpg 549w, assets/images/b/DSC02105-2a47d8ca.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
-      </label>
+        <img src="assets/images/1/DSC02105-bbcb0d48.jpg" srcset="assets/images/DSC02105-bbcb0d48.jpg 549w, assets/images/b/DSC02105-2a47d8ca.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">Carwrap / komplett Folierung : Audi Q7 in Holzkohle matt</span></a>
         </div>
+        <script>
+          document.getElementById('closeButton').addEventListener('click', function() {
+  document.getElementById('largeImage').style.display = 'none';
+});
+        </script>
         <div class="col image_container filtr-item" data-category="1">
         <a href="assets/images/DSC02093-16f42d8b.jpg" data-lightbox="lb147" title="Carwrap / komplett Folierung : Audi Q7 in Holzkohle matt" class="cboxElement">
         <picture>
         <source srcset="assets/images/a/DSC02093-89c8410a.webp 549w, assets/images/d/DSC02093-45dd83da.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC02093-6964458c.jpg" srcset="assets/images/DSC02093-6964458c.jpg 549w, assets/images/b/DSC02093-91672450.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
+        <img src="assets/images/1/DSC02093-6964458c.jpg" srcset="assets/images/DSC02093-6964458c.jpg 549w, assets/images/b/DSC02093-91672450.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">Carwrap / komplett Folierung : Audi Q7 in Holzkohle matt</span></a>
         </div>
@@ -50,7 +52,7 @@
         <a href="assets/images/DSC02101-1513189a.jpg" data-lightbox="lb147" title="Carwrap / komplett Folierung : Audi Q7 in Holzkohle matt" class="cboxElement">
         <picture>
         <source srcset="assets/images/a/DSC02101-66037101.webp 549w, assets/images/d/DSC02101-a517e27d.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC02101-69b94925.jpg" srcset="assets/images/DSC02101-69b94925.jpg 549w, assets/images/b/DSC02101-836daf65.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
+        <img src="assets/images/1/DSC02101-69b94925.jpg" srcset="assets/images/DSC02101-69b94925.jpg 549w, assets/images/b/DSC02101-836daf65.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">Carwrap / komplett Folierung : Audi Q7 in Holzkohle matt</span></a>
         </div>
@@ -58,7 +60,7 @@
         <a href="assets/images/DSC04621-893b4553.jpg" data-lightbox="lb147" title="Full Carwrap BMW M3 in schwarz metallic" class="cboxElement">
         <picture>
         <source srcset="assets/images/a/DSC04621-e58ed9c5.webp 549w, assets/images/d/DSC04621-cd9fa70d.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC04621-7c7c8775.jpg" srcset="assets/images/DSC04621-7c7c8775.jpg 549w, assets/images/b/DSC04621-96c3c7b0.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
+        <img src="assets/images/1/DSC04621-7c7c8775.jpg" srcset="assets/images/DSC04621-7c7c8775.jpg 549w, assets/images/b/DSC04621-96c3c7b0.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">Full Carwrap BMW M3 in schwarz metallic</span></a>
         </div>
@@ -66,7 +68,7 @@
         <a href="assets/images/DSC04623-cea0c9ec.jpg" data-lightbox="lb147" title="Full Carwrap BMW M3 in schwarz metallic" class="cboxElement">
         <picture>
         <source srcset="assets/images/a/DSC04623-1abe4a04.webp 549w, assets/images/d/DSC04623-cb472969.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC04623-4c383253.jpg" srcset="assets/images/DSC04623-4c383253.jpg 549w, assets/images/b/DSC04623-198626ce.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
+        <img src="assets/images/1/DSC04623-4c383253.jpg" srcset="assets/images/DSC04623-4c383253.jpg 549w, assets/images/b/DSC04623-198626ce.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">Full Carwrap BMW M3 in schwarz metallic</span></a>
         </div>
@@ -74,7 +76,7 @@
         <a href="assets/images/DSC04633-e2896023.jpg" data-lightbox="lb147" title="Full Carwrap BMW M3 in schwarz metallic" class="cboxElement">
         <picture>
         <source srcset="assets/images/a/DSC04633-0ca3101d.webp 549w, assets/images/d/DSC04633-92f2ad86.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC04633-eeea0bc8.jpg" srcset="assets/images/DSC04633-eeea0bc8.jpg 549w, assets/images/b/DSC04633-1da0f956.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
+        <img src="assets/images/1/DSC04633-eeea0bc8.jpg" srcset="assets/images/DSC04633-eeea0bc8.jpg 549w, assets/images/b/DSC04633-1da0f956.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">Full Carwrap BMW M3 in schwarz metallic</span></a>
         </div>
@@ -82,7 +84,7 @@
         <a href="assets/images/DSC01292-8e74e409.jpg" data-lightbox="lb147" title="full Carwrap Porsche Cayenne in Super Chrome Titanium" class="cboxElement">
         <picture>
         <source srcset="assets/images/a/DSC01292-dc77bfaf.webp 549w, assets/images/d/DSC01292-815d403d.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC01292-c204c15e.jpg" srcset="assets/images/DSC01292-c204c15e.jpg 549w, assets/images/b/DSC01292-12949902.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
+        <img src="assets/images/1/DSC01292-c204c15e.jpg" srcset="assets/images/DSC01292-c204c15e.jpg 549w, assets/images/b/DSC01292-12949902.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">full Carwrap Porsche Cayenne in Super Chrome Titanium</span></a>
         </div>
@@ -90,7 +92,7 @@
         <a href="assets/images/DSC01294-cf03b988.jpg" data-lightbox="lb147" title="full Carwrap Porsche Cayenne in Super Chrome Titanium" class="cboxElement">
         <picture>
         <source srcset="assets/images/a/DSC01294-9bc241fc.webp 549w, assets/images/d/DSC01294-7fa114de.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC01294-69119385.jpg" srcset="assets/images/DSC01294-69119385.jpg 549w, assets/images/b/DSC01294-c202600c.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
+        <img src="assets/images/1/DSC01294-69119385.jpg" srcset="assets/images/DSC01294-69119385.jpg 549w, assets/images/b/DSC01294-c202600c.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">full Carwrap Porsche Cayenne in Super Chrome Titanium</span></a>
         </div>
@@ -98,7 +100,7 @@
         <a href="assets/images/DSC01295-28a898b1.jpg" data-lightbox="lb147" title="full Carwrap Porsche Cayenne in Super Chrome Titanium" class="cboxElement">
         <picture>
         <source srcset="assets/images/a/DSC01295-7cbbdacc.webp 549w, assets/images/d/DSC01295-ac6516c2.webp 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" type="image/webp" width="549" height="366">
-        <img src="assets/images/DSC01295-0716ae00.jpg" srcset="assets/images/DSC01295-0716ae00.jpg 549w, assets/images/b/DSC01295-d850162d.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
+        <img src="assets/images/1/DSC01295-0716ae00.jpg" srcset="assets/images/DSC01295-0716ae00.jpg 549w, assets/images/b/DSC01295-d850162d.jpg 824w" sizes="(max-width: 549) calc(100vw - 24px), (max-width: 767) calc(100vw / 2), (max-width: 939) calc(100vw / 3), (max-width: 1298) calc(100vw / 4), calc(100vw / 5)" width="549" height="366" alt="" loading="lazy">
         </picture>
         <span class="item-desc">full Carwrap Porsche Cayenne in Super Chrome Titanium</span></a>
         </div>

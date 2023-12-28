@@ -208,11 +208,16 @@ img {
   display: inline-block;
 }
 /* BUTTON FÜR IMG */
-.fimage_container1 {
-  display: none;
+.image-container {
+  position: relative;
 }
-#toggle:checked + #largeImage {
-  display: flex;
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px; 
+  color: var(--Orange); 
+  cursor: pointer;
 }
 /* FOOTER */
 .footer {
