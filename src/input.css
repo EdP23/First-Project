@@ -372,8 +372,11 @@ img {
     margin-top: 6rem;
   }
   .info p {
-    font-size: 18px;
+    font-size: 15px;
     -webkit-text-stroke-width: 1px;
+  }
+  .scheibentoenung-1 {
+    margin-left: 1.25rem;
   }
     /* PROJEKTE */
 .filtr-container {
@@ -409,6 +412,7 @@ img {
 
 /* MEDIA SCREEN DESKTOP */
 @media (min-width: 768px) {
+   /* HOME-INDEX */
   .haupt-main {
     flex-direction: row;
     flex-wrap: wrap;
@@ -421,7 +425,7 @@ img {
   #container p,
   h1,
   h2 {
-    font-size: 20px;
+    font-size: 25px;
     -webkit-text-stroke-width: 1px;
   }
   .demo {
@@ -435,7 +439,25 @@ img {
   grid-template-columns: repeat(4, 1fr);
 }
 
-
+ /* FOLIEN */
+.info p {
+  font-size: 22px;
+  -webkit-text-stroke-width: 1px;
+}
+.info img {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.scheibentoenung-1 {
+  /* margin-left: 10rem; */
+}
+.scheibentoenung-2 {
+  margin-left: 4rem;
+}
+.schutzfolien-1 {
+  margin-left: 6rem;
+}
 /* FOOTER */
   .footer {
       text-align: center;
@@ -467,6 +489,23 @@ img {
       /* PROJEKTE */
 
 
+/* FOLIEN */
+.info p {
+  font-size: 25px;
+  -webkit-text-stroke-width: 1px;
+}
+.scheibentoenung-1 {
+  float: left ;
+  margin-right:2px ;
+}
+.scheibentoenung-2 {
+  width: 49%;
+  height: 35vh;
+  margin-top: 1rem;
+}
+.schutzfolien-1 {
+  margin-left: 12rem;
+}
 
 /* FOOTER */
   .footer {
