@@ -320,6 +320,13 @@ img {
     width: auto;
     left: auto;
   }
+  .footer-kont {
+    text-align: center;
+    position: static;
+    margin-top: 29rem;
+    width: auto;
+    left: auto;
+  }
 }
 
 
@@ -372,12 +379,20 @@ img {
     margin-top: 6rem;
   }
   .info p {
-    font-size: 15px;
+    font-size: 17px;
     -webkit-text-stroke-width: 1px;
   }
   .scheibentoenung-1 {
-    margin-left: 1.25rem;
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
   }
+  .schutzfolien-1 {
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
+  }
+
     /* PROJEKTE */
 .filtr-container {
   grid-template-columns: repeat(3, 1fr);
@@ -396,7 +411,7 @@ img {
   .footer-fol {
     text-align: center;
     position: static;
-    margin-top: 21rem;
+    margin-top: 8rem;
     width: auto;
     left: auto;
   }
@@ -404,6 +419,13 @@ img {
     text-align: center;
     position: static;
     margin-top: 30rem;
+    width: auto;
+    left: auto;
+  }
+  .footer-kont {
+    text-align: center;
+    position: static;
+    margin-top: 28.8rem;
     width: auto;
     left: auto;
   }
@@ -441,22 +463,13 @@ img {
 
  /* FOLIEN */
 .info p {
-  font-size: 22px;
+  font-size: 19px;
   -webkit-text-stroke-width: 1px;
 }
-.info img {
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
-}
-.scheibentoenung-1 {
-  /* margin-left: 10rem; */
-}
-.scheibentoenung-2 {
-  margin-left: 4rem;
-}
 .schutzfolien-1 {
-  margin-left: 6rem;
+  margin-left: auto; 
+  margin-right: auto;
+  display: block; 
 }
 /* FOOTER */
   .footer {
@@ -469,7 +482,7 @@ img {
   .footer-fol {
     text-align: center;
     position: static;
-    margin-top: 29rem;
+    margin-top: 8rem;
     width: auto;
     left: auto;
   }
@@ -494,18 +507,15 @@ img {
   font-size: 25px;
   -webkit-text-stroke-width: 1px;
 }
-.scheibentoenung-1 {
-  float: left ;
-  margin-right:2px ;
-}
-.scheibentoenung-2 {
-  width: 49%;
-  height: 35vh;
-  margin-top: 1rem;
-}
+
 .schutzfolien-1 {
-  margin-left: 12rem;
+  margin-left: auto; 
+  margin-right: auto;
+  display: block; 
 }
+
+/* KONTAKT */
+
 
 /* FOOTER */
   .footer {
@@ -518,8 +528,16 @@ img {
   .footer-fol {
     text-align: center;
     position: static;
-    margin-top: 35rem;
+    margin-top: 8rem;
     width: auto;
     left: auto;
   }
+  .footer-kont {
+    text-align: center;
+    position: static;
+    margin-top: 28.8rem;
+    width: auto;
+    left: auto;
+  }
+
 }
