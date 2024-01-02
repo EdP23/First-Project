@@ -592,10 +592,6 @@ nav ul li {
   }
 }
 
-.absolute{
-  position: absolute;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -650,6 +646,16 @@ nav ul li {
   justify-content: center;
 }
 
+.justify-between{
+  justify-content: space-between;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .rounded{
   border-radius: 0.25rem;
 }
@@ -672,6 +678,10 @@ nav ul li {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-tl{
+  background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+}
+
 .bg-gradient-to-tr{
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
@@ -689,6 +699,10 @@ nav ul li {
 
 .to-\[\#fa760b\]{
   --tw-gradient-to: #fa760b var(--tw-gradient-to-position);
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .p-8{
@@ -710,12 +724,12 @@ nav ul li {
   padding-bottom: 0.5rem;
 }
 
-.pl-1{
-  padding-left: 0.25rem;
-}
-
 .pl-2{
   padding-left: 0.5rem;
+}
+
+.pl-3{
+  padding-left: 0.75rem;
 }
 
 .pr-1{
@@ -766,6 +780,11 @@ nav ul li {
   font-weight: 700;
 }
 
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-gray-700{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -805,21 +824,43 @@ nav ul li {
   --Orange: rgb(216, 80, 27);
   --black: rgb(46, 44, 44);
   --fa-solid:var(--fa-maximize);
+  --black2:black;
+}
+
+/* BODY-COLOR */
+
+.home{
+  background-color: var(--black2);
+  width: 100%;
+  height: 100%;
+}
+
+.folien{
+  background-color: var(--black2);
+  width: 100%;
+  height: 100%;
+}
+
+.projekte {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.kontakt {
+  background-image: url(.././dist/img/background.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 
 /* HEADER */
 
 header img {
   height: 80px;
-}
-
-body {
-  background-image: url(.././dist/img/background.jpeg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 
 header {
@@ -831,6 +872,7 @@ header {
   display: flex;
   align-items: center;
   box-shadow: 0 0 25px 0 black;
+  z-index: 100;
 }
 
 header * {
@@ -869,7 +911,7 @@ label {
 label:before,
 label:after,
 label div {
-  background: brown;
+  background: var(--White);
   content: "";
   display: block;
   height: 6px;
@@ -1009,29 +1051,13 @@ img {
   display: inline-block;
 }
 
-/* BUTTON FÜR IMG */
-
-.image-container {
-  position: relative;
-}
-
-.close-button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--Orange);
-  cursor: pointer;
-}
-
 /* FOOTER */
 
 .footer {
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  height: 5vh;
+  height: 15vh;
 }
 
 /* MEDIA SCREEN MOBILE */
@@ -1056,7 +1082,7 @@ img {
 
   #container p,
   h1,
-  h2, p {
+  h2 {
     font-size: 19px;
     -webkit-text-stroke-width: 1px;
   }
@@ -1097,14 +1123,19 @@ img {
 
   /* FOLIEN */
 
-  .info {
-    margin-top: 5rem;
+  .info p {
+    font-size: 17px;
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .info h1 {
+    padding-top: 5rem;
   }
 
   /* PROJEKTE */
 
   .filtr-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:1fr;
     padding-top: 8rem;
   }
 
@@ -1113,7 +1144,7 @@ img {
   .footer {
     text-align: center;
     position: static;
-    margin-top: 90rem;
+    margin-top: 55rem;
     width: auto;
     left: auto;
   }
@@ -1121,7 +1152,7 @@ img {
   .footer-fol {
     text-align: center;
     position: static;
-    margin-top: 6rem;
+    margin-top: 8rem;
     width: auto;
     left: auto;
   }
@@ -1129,7 +1160,7 @@ img {
   .footer-projekt {
     text-align: center;
     position: static;
-    margin-top: 8rem;
+    margin-top: 328rem;
     width: auto;
     left: auto;
   }
@@ -1137,7 +1168,7 @@ img {
   .footer-kont {
     text-align: center;
     position: static;
-    margin-top: 29rem;
+    margin-top: 22.8rem;
     width: auto;
     left: auto;
   }
@@ -1216,7 +1247,7 @@ img {
   /* PROJEKTE */
 
   .filtr-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:repeat(2, 1fr);
     padding-top: 8rem;
   }
 
@@ -1225,7 +1256,7 @@ img {
   .footer {
     text-align: center;
     position: static;
-    margin-top: 7rem;
+    margin-top: 5rem;
     width: auto;
     left: auto;
   }
@@ -1233,7 +1264,7 @@ img {
   .footer-fol {
     text-align: center;
     position: static;
-    margin-top: 8rem;
+    margin-top: 1rem;
     width: auto;
     left: auto;
   }
@@ -1241,7 +1272,7 @@ img {
   .footer-projekt {
     text-align: center;
     position: static;
-    margin-top: 30rem;
+    margin-top: 85rem;
     width: auto;
     left: auto;
   }
@@ -1249,7 +1280,7 @@ img {
   .footer-kont {
     text-align: center;
     position: static;
-    margin-top: 28.8rem;
+    margin-top: 24.5rem;
     width: auto;
     left: auto;
   }
@@ -1286,7 +1317,7 @@ img {
   /* PROJEKTE */
 
   .filtr-container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* FOLIEN */
@@ -1302,12 +1333,18 @@ img {
     display: block;
   }
 
+  .schutzfolien-1:hover {
+    transform: scale(2);
+    transition: transform 0.3s ease;
+    image-rendering: pixelated;
+  }
+
   /* FOOTER */
 
   .footer {
     text-align: center;
     position: static;
-    margin-top: 14rem;
+    margin-top: 2rem;
     width: auto;
     left: auto;
   }
@@ -1323,16 +1360,34 @@ img {
   .footer-projekt {
     text-align: center;
     position: static;
-    margin-top: 28rem;
+    margin-top: 35rem;
     width: auto;
     left: auto;
+  }
+
+  .footer-kont {
+    text-align: center;
+    position: static;
+    width: auto;
+    left: auto;
+    bottom: 0;
   }
 }
 
 /* MEDIA SCREEN LG-SIZE*/
 
 @media (min-width: 1024px) {
+  .demo {
+    padding-left: 5rem;
+    padding-right: 10rem;
+    position: relative;
+  }
+
   /* PROJEKTE */
+
+  .filtr-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   /* FOLIEN */
 
@@ -1354,7 +1409,7 @@ img {
   .footer {
     text-align: center;
     position: static;
-    margin-top: 14rem;
+    margin-top: 8rem;
     width: auto;
     left: auto;
   }
@@ -1367,10 +1422,17 @@ img {
     left: auto;
   }
 
+  .footer-projekt {
+    text-align: center;
+    position: static;
+    margin-top: 40rem;
+    width: auto;
+    left: auto;
+  }
+
   .footer-kont {
     text-align: center;
     position: static;
-    margin-top: 28.8rem;
     width: auto;
     left: auto;
   }
